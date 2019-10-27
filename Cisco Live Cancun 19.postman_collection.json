@@ -1,0 +1,481 @@
+{
+	"info": {
+		"_postman_id": "7d2d7bd8-9fed-423c-80b2-2014bf028b02",
+		"name": "Cisco Live Cancun 19",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Mexico123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "dnac_admin",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://mxc-dnac4/api/system/v1/auth/login",
+					"protocol": "https",
+					"host": [
+						"mxc-dnac4"
+					],
+					"path": [
+						"api",
+						"system",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Authentication",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://mxc-dnac4/api/system/v1/auth/login",
+							"protocol": "https",
+							"host": [
+								"mxc-dnac4"
+							],
+							"path": [
+								"api",
+								"system",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "7",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=UTF-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Aug 2018 20:11:35 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "webserver",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "X-JWT-ACCESS-TOKEN=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1YjRmMmJmOWI2MmM1YTAwODlhYjJiYWQiLCJhdXRoU291cmNlIjoiaW50ZXJuYWwiLCJ0ZW5hbnROYW1lIjoiVE5UMCIsInJvbGVzIjpbIjViNGYyYmY4YjYyYzVhMDA4OWFiMmJhYyJdLCJ0ZW5hbnRJZCI6IjViNGYyYmY3YjYyYzVhMDA4OWFiMmJhYSIsImV4cCI6MTUzNDk3MjI5OSwidXNlcm5hbWUiOiJhZG1pbiJ9.KF_vqVknpj2kPzgjm0nqc6TXxaYzn_wYhUCZeRSELbw;Version=1;Comment=;Domain=;Path=/;Max-Age=3600;Secure;HttpOnly",
+							"name": "Set-Cookie",
+							"description": "an HTTP cookie"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains",
+							"name": "Strict-Transport-Security",
+							"description": "A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains."
+						},
+						{
+							"key": "Via",
+							"value": "api-gateway",
+							"name": "Via",
+							"description": "Informs the client of proxies through which the response was sent."
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Mon Jan 18 2038 21:14:07 GMT-0600 (CST)",
+							"httpOnly": false,
+							"domain": "mxc-dnac4",
+							"path": "/",
+							"secure": false,
+							"value": "1f0gijusqvaf696e264db55as",
+							"key": "JSESSIONID"
+						},
+						{
+							"expires": "Wed Aug 22 2018 16:11:39 GMT-0500 (CDT)",
+							"httpOnly": true,
+							"domain": "mxc-dnac4",
+							"path": "/",
+							"secure": true,
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1YjRmMmJmOWI2MmM1YTAwODlhYjJiYWQiLCJhdXRoU291cmNlIjoiaW50ZXJuYWwiLCJ0ZW5hbnROYW1lIjoiVE5UMCIsInJvbGVzIjpbIjViNGYyYmY4YjYyYzVhMDA4OWFiMmJhYyJdLCJ0ZW5hbnRJZCI6IjViNGYyYmY3YjYyYzVhMDA4OWFiMmJhYSIsImV4cCI6MTUzNDk3MjI5OSwidXNlcm5hbWUiOiJhZG1pbiJ9.KF_vqVknpj2kPzgjm0nqc6TXxaYzn_wYhUCZeRSELbw",
+							"key": "X-JWT-ACCESS-TOKEN"
+						}
+					],
+					"body": "success"
+				}
+			]
+		},
+		{
+			"name": "cli read only commands",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://mxc-dnac4/dna/intent/api/v1/network-device-poller/cli/legit-reads",
+					"protocol": "https",
+					"host": [
+						"mxc-dnac4"
+					],
+					"path": [
+						"dna",
+						"intent",
+						"api",
+						"v1",
+						"network-device-poller",
+						"cli",
+						"legit-reads"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "device list",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Mexico123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://mxc-dnac4/dna/intent/api/v1/network-device?",
+					"protocol": "https",
+					"host": [
+						"mxc-dnac4"
+					],
+					"path": [
+						"dna",
+						"intent",
+						"api",
+						"v1",
+						"network-device"
+					],
+					"query": [
+						{
+							"key": "series",
+							"value": "Cisco Catalyst 9300 Series Switches",
+							"disabled": true
+						},
+						{
+							"key": "hostname",
+							"value": "Edge1.sd-access.cisco.com",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get available templates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://mxc-dnac4/dna/intent/api/v1/template-programmer/template/",
+					"protocol": "https",
+					"host": [
+						"mxc-dnac4"
+					],
+					"path": [
+						"dna",
+						"intent",
+						"api",
+						"v1",
+						"template-programmer",
+						"template",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-templates with id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://mxc-dnac4/dna/intent/api/v1/template-programmer/template/{templateid}",
+					"protocol": "https",
+					"host": [
+						"mxc-dnac4"
+					],
+					"path": [
+						"dna",
+						"intent",
+						"api",
+						"v1",
+						"template-programmer",
+						"template",
+						"{templateid}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create project",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Mexico123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\": \"this is a project for cisco live\",\n    \"name\": \"clive-alecarra\"\n}"
+				},
+				"url": {
+					"raw": "https://mxc-dnac4/dna/intent/api/v1/template-programmer/project",
+					"protocol": "https",
+					"host": [
+						"mxc-dnac4"
+					],
+					"path": [
+						"dna",
+						"intent",
+						"api",
+						"v1",
+						"template-programmer",
+						"project"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get available projects",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://mxc-dnac4/dna/intent/api/v1/template-programmer/project",
+					"protocol": "https",
+					"host": [
+						"mxc-dnac4"
+					],
+					"path": [
+						"dna",
+						"intent",
+						"api",
+						"v1",
+						"template-programmer",
+						"project"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create a template in a project",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"alecarra-clive-template\",\n    \"description\": \"\",\n    \"tags\": [],\n    \"deviceTypes\": [\n\n        {\n            \"productFamily\": \"Switches and Hubs\"\n\n        }\n    ],\n    \"softwareType\": \"IOS-XE\",\n    \"softwareVariant\": \"XE\",\n    \"templateContent\": \"\\nint vlan 303\\n description ++interface for clive++\",\n    \"rollbackTemplateContent\": \"\",\n    \"templateParams\": [],\n    \"rollbackTemplateParams\": [],\n    \"composite\": false,\n    \"containingTemplates\": [],\n    \"projectName\": \"clive-alecarra\",\n    \"projectId\": \"0b8d5581-f851-45b0-ba28-d46c8fc7b909\"\n\n}"
+				},
+				"url": {
+					"raw": "https://mxc-dnac4/dna/intent/api/v1/template-programmer/project/0b8d5581-f851-45b0-ba28-d46c8fc7b909/template",
+					"protocol": "https",
+					"host": [
+						"mxc-dnac4"
+					],
+					"path": [
+						"dna",
+						"intent",
+						"api",
+						"v1",
+						"template-programmer",
+						"project",
+						"0b8d5581-f851-45b0-ba28-d46c8fc7b909",
+						"template"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "chagne the content of the tempalte",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"author\": \"alecarra\",\n    \"name\": \"alecarra-clive-template\",\n    \"description\": \"\",\n    \"tags\": [],\n    \"deviceTypes\": [\n        {\n            \"productFamily\": \"Switches and Hubs\"\n        }\n    ],\n    \"softwareType\": \"IOS-XE\",\n    \"softwareVariant\": \"XE\",\n    \"templateContent\": \"\\nint vlan 303\\n description ++new-description++\",\n    \"rollbackTemplateContent\": \"\",\n    \"templateParams\": [],\n    \"rollbackTemplateParams\": [],\n    \"composite\": false,\n    \"containingTemplates\": [],\n    \"id\": \"4df6cbc9-bf9d-4cc1-a35f-6bb1afc1f885\",\n    \"createTime\": 1571548843915,\n    \"lastUpdateTime\": 1571549946508,\n    \"projectName\": \"clive-alecarra\",\n    \"projectId\": \"0b8d5581-f851-45b0-ba28-d46c8fc7b909\",\n    \"parentTemplateId\": \"4df6cbc9-bf9d-4cc1-a35f-6bb1afc1f885\"\n}"
+				},
+				"url": {
+					"raw": "https://mxc-dnac4/dna/intent/api/v1/template-programmer/template",
+					"protocol": "https",
+					"host": [
+						"mxc-dnac4"
+					],
+					"path": [
+						"dna",
+						"intent",
+						"api",
+						"v1",
+						"template-programmer",
+						"template"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-templates with id after modifying",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://mxc-dnac4/dna/intent/api/v1/template-programmer/template/{templateid}",
+					"protocol": "https",
+					"host": [
+						"mxc-dnac4"
+					],
+					"path": [
+						"dna",
+						"intent",
+						"api",
+						"v1",
+						"template-programmer",
+						"template",
+						"{templateid}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete project",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://mxc-dnac4/dna/intent/api/v1/template-programmer/project/0b8d5581-f851-45b0-ba28-d46c8fc7b909",
+					"protocol": "https",
+					"host": [
+						"mxc-dnac4"
+					],
+					"path": [
+						"dna",
+						"intent",
+						"api",
+						"v1",
+						"template-programmer",
+						"project",
+						"0b8d5581-f851-45b0-ba28-d46c8fc7b909"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
