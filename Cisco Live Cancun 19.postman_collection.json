@@ -12,13 +12,13 @@
 					"type": "basic",
 					"basic": [
 						{
-							"key": "password",
-							"value": "Mexico123",
+							"key": "username",
+							"value": "admin",
 							"type": "string"
 						},
 						{
-							"key": "username",
-							"value": "dnac_admin",
+							"key": "password",
+							"value": "Mexico123",
 							"type": "string"
 						},
 						{
@@ -126,7 +126,7 @@
 					],
 					"cookie": [
 						{
-							"expires": "Mon Jan 18 2038 21:14:07 GMT-0600 (CST)",
+							"expires": "Mon Jan 18 2038 22:14:07 GMT-0500 (EST)",
 							"httpOnly": false,
 							"domain": "mxc-dnac4",
 							"path": "/",
@@ -135,7 +135,7 @@
 							"key": "JSESSIONID"
 						},
 						{
-							"expires": "Wed Aug 22 2018 16:11:39 GMT-0500 (CDT)",
+							"expires": "Wed Aug 22 2018 16:11:39 GMT-0500 (EST)",
 							"httpOnly": true,
 							"domain": "mxc-dnac4",
 							"path": "/",
@@ -175,31 +175,6 @@
 		{
 			"name": "device list",
 			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": [
-						{
-							"key": "password",
-							"value": "Mexico123",
-							"type": "string"
-						},
-						{
-							"key": "username",
-							"value": "admin",
-							"type": "string"
-						},
-						{
-							"key": "saveHelperData",
-							"value": false,
-							"type": "boolean"
-						},
-						{
-							"key": "showPassword",
-							"value": false,
-							"type": "boolean"
-						}
-					]
-				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -261,7 +236,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://mxc-dnac4/dna/intent/api/v1/template-programmer/template/{templateid}",
+					"raw": "https://mxc-dnac4/dna/intent/api/v1/template-programmer/template/adf531dd-3ef7-4e70-9d5a-3c797ef83a6b",
 					"protocol": "https",
 					"host": [
 						"mxc-dnac4"
@@ -273,7 +248,7 @@
 						"v1",
 						"template-programmer",
 						"template",
-						"{templateid}"
+						"adf531dd-3ef7-4e70-9d5a-3c797ef83a6b"
 					]
 				}
 			},
@@ -282,42 +257,18 @@
 		{
 			"name": "create project",
 			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": [
-						{
-							"key": "password",
-							"value": "Mexico123",
-							"type": "string"
-						},
-						{
-							"key": "username",
-							"value": "admin",
-							"type": "string"
-						},
-						{
-							"key": "saveHelperData",
-							"value": false,
-							"type": "boolean"
-						},
-						{
-							"key": "showPassword",
-							"value": false,
-							"type": "boolean"
-						}
-					]
-				},
 				"method": "POST",
 				"header": [
 					{
 						"key": "Content-Type",
 						"value": "application/json",
-						"type": "text"
+						"type": "text",
+						"disabled": true
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"description\": \"this is a project for cisco live\",\n    \"name\": \"clive-alecarra\"\n}"
+					"raw": "{\n    \"description\": \"this is a project for cisco live cancun 2019\",\n    \"name\": \"brkdev-1105\"\n}"
 				},
 				"url": {
 					"raw": "https://mxc-dnac4/dna/intent/api/v1/template-programmer/project",
@@ -355,6 +306,13 @@
 						"v1",
 						"template-programmer",
 						"project"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "clive-alecarra",
+							"disabled": true
+						}
 					]
 				}
 			},
@@ -373,10 +331,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\": \"alecarra-clive-template\",\n    \"description\": \"\",\n    \"tags\": [],\n    \"deviceTypes\": [\n\n        {\n            \"productFamily\": \"Switches and Hubs\"\n\n        }\n    ],\n    \"softwareType\": \"IOS-XE\",\n    \"softwareVariant\": \"XE\",\n    \"templateContent\": \"\\nint vlan 303\\n description ++interface for clive++\",\n    \"rollbackTemplateContent\": \"\",\n    \"templateParams\": [],\n    \"rollbackTemplateParams\": [],\n    \"composite\": false,\n    \"containingTemplates\": [],\n    \"projectName\": \"clive-alecarra\",\n    \"projectId\": \"0b8d5581-f851-45b0-ba28-d46c8fc7b909\"\n\n}"
+					"raw": "{\n    \"name\": \"alecarra-clive-template\",\n    \"description\": \"\",\n    \"tags\": [],\n    \"deviceTypes\": [\n\n        {\n            \"productFamily\": \"Switches and Hubs\"\n\n        }\n    ],\n    \"softwareType\": \"IOS-XE\",\n    \"softwareVariant\": \"XE\",\n    \"templateContent\": \"\\nint vlan 303\\n description ++interface for cisco live cancun 2019++\",\n    \"rollbackTemplateContent\": \"\",\n    \"templateParams\": [],\n    \"rollbackTemplateParams\": [],\n    \"composite\": false,\n    \"containingTemplates\": [],\n    \"projectName\": \"brkdev-1105\",\n    \"projectId\": \"\"\n\n}"
 				},
 				"url": {
-					"raw": "https://mxc-dnac4/dna/intent/api/v1/template-programmer/project/0b8d5581-f851-45b0-ba28-d46c8fc7b909/template",
+					"raw": "https://mxc-dnac4/dna/intent/api/v1/template-programmer/project/e61f6e41-0390-4b94-a0c8-5f681b474752/template",
 					"protocol": "https",
 					"host": [
 						"mxc-dnac4"
@@ -388,7 +346,7 @@
 						"v1",
 						"template-programmer",
 						"project",
-						"0b8d5581-f851-45b0-ba28-d46c8fc7b909",
+						"e61f6e41-0390-4b94-a0c8-5f681b474752",
 						"template"
 					]
 				}
@@ -396,7 +354,7 @@
 			"response": []
 		},
 		{
-			"name": "chagne the content of the tempalte",
+			"name": "change the content of the tempalte",
 			"request": {
 				"method": "PUT",
 				"header": [
@@ -408,7 +366,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"author\": \"alecarra\",\n    \"name\": \"alecarra-clive-template\",\n    \"description\": \"\",\n    \"tags\": [],\n    \"deviceTypes\": [\n        {\n            \"productFamily\": \"Switches and Hubs\"\n        }\n    ],\n    \"softwareType\": \"IOS-XE\",\n    \"softwareVariant\": \"XE\",\n    \"templateContent\": \"\\nint vlan 303\\n description ++new-description++\",\n    \"rollbackTemplateContent\": \"\",\n    \"templateParams\": [],\n    \"rollbackTemplateParams\": [],\n    \"composite\": false,\n    \"containingTemplates\": [],\n    \"id\": \"4df6cbc9-bf9d-4cc1-a35f-6bb1afc1f885\",\n    \"createTime\": 1571548843915,\n    \"lastUpdateTime\": 1571549946508,\n    \"projectName\": \"clive-alecarra\",\n    \"projectId\": \"0b8d5581-f851-45b0-ba28-d46c8fc7b909\",\n    \"parentTemplateId\": \"4df6cbc9-bf9d-4cc1-a35f-6bb1afc1f885\"\n}"
+					"raw": "{\n\t\"author\": \"alecarra\",\n    \"name\": \"alecarra-clive-template\",\n    \"description\": \"\",\n    \"tags\": [],\n    \"deviceTypes\": [\n        {\n            \"productFamily\": \"Switches and Hubs\",\n            \"productSeries\": \"Cisco Catalyst 9300 Series Switches\",\n            \"productType\": \"Cisco Catalyst 9300 Switch\"\n        }\n    ],\n    \"softwareType\": \"IOS-XE\",\n    \"softwareVariant\": \"XE\",\n    \"templateContent\": \"\\nint vlan 303\\n description ++this has been updated++\",\n    \"rollbackTemplateContent\": \"\",\n    \"templateParams\": [],\n    \"rollbackTemplateParams\": [],\n    \"composite\": false,\n    \"containingTemplates\": [],\n    \"id\": \"\",\n    \"createTime\": 1571548843915,\n    \"lastUpdateTime\": 1571549946508,\n    \"projectName\": \"brkdev-1105\",\n    \"projectId\": \"\",\n    \"parentTemplateId\": \"\"\n}"
 				},
 				"url": {
 					"raw": "https://mxc-dnac4/dna/intent/api/v1/template-programmer/template",
@@ -458,7 +416,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "https://mxc-dnac4/dna/intent/api/v1/template-programmer/project/0b8d5581-f851-45b0-ba28-d46c8fc7b909",
+					"raw": "https://mxc-dnac4/dna/intent/api/v1/template-programmer/project/",
 					"protocol": "https",
 					"host": [
 						"mxc-dnac4"
@@ -470,7 +428,7 @@
 						"v1",
 						"template-programmer",
 						"project",
-						"0b8d5581-f851-45b0-ba28-d46c8fc7b909"
+						""
 					]
 				}
 			},
